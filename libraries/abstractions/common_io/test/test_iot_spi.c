@@ -66,12 +66,14 @@ uint32_t ultestIotSpiSlave = 0;
 
 
 /*-----------------------------------------------------------*/
+/* The message string output by assisted test. */
 static char _cMsg[ _MESSAGE_LENGTH ] = { 0 };
 
+/* Append bytes in the buffer to _cMsg, starting at given offset. */
 static void prvAppendToMessage( size_t * pOffset,
                                 uint8_t * pBuffer,
                                 size_t bufferLen );
-
+/* Output message _cMsg. */
 static void prvOutputMessage();
 
 /**
